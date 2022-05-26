@@ -20,6 +20,7 @@ function MainPage() {
         {project_list}
       </div>
       <button>글쓰기</button>
+      <button>로그인</button>
     </div>
   );
 }
