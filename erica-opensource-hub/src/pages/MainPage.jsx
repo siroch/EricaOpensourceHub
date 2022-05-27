@@ -1,15 +1,8 @@
 import "./MainPage.css"
-import ProjectData from "./project_item_test.json"
-import CourseData from "./course_item_test.json"
+import ProjectData from "../json/project_item_test.json"
+import CourseData from "../json/course_item_test.json"
 
 function MainPage() {
-  const project_list = ProjectData.project.map((project_data) => {
-    return JSON.stringify(project_data)
-  })
-
-  const course_list = CourseData.course.map((course_data) => {
-    return JSON.stringify(course_data)
-  })
   return (
     <div>
       <div>
@@ -17,13 +10,14 @@ function MainPage() {
       </div>
       <button>글쓰기</button>
       <button>로그인</button>
+      <button>문의</button>
       <ul>
-        {CourseData.course.map((course_data) => {
-          <li key={course_data.id}>
-            {[course_data.college, course_data.department
-            ]}
-          </li>
-        })}
+        {CourseData.course.map((course_data) => (
+          <button key={course_data.id}>
+            {course_data.college}, 
+            {course_data.department}
+          </button>
+        ))}
       </ul>
       <ul>
         {ProjectData.project.map((project_data) => (
