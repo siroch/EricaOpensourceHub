@@ -1,0 +1,15 @@
+{
+  "user" : [
+    {
+      "user_id": "포탈 아이디",
+      "user_passwd": "포탈 비밀번호",
+      "college_id": 2018044202,
+      "name": "강동호",
+      "college": "소프트웨어융합대학",
+      "department":"소프트웨어융합학부",
+      "owner_project": [1,2,5,19],
+      "collaborator_project": [3,4],
+      "like_project": [6]
+    }
+  ]
+}
