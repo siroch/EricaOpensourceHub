@@ -1,18 +1,30 @@
 import "./PostUpdateForm.css"
 import ProjectData from "../json/project_item_test.json"
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 function PostUpdateForm() {
   return (
-    <div>
+    <div class="test">
       <ul>
         {ProjectData.project.map((project_data) => (
           project_data.project_id === 1 // 프로젝트 id로 판별
-          ? <div class="help-tip">
-              <p>edit date: {project_data.editdate}<br />
-              user id: {project_data.owner}<br />
-              commit message: {project_data.commit_message}<br />
-              project_version: {project_data.project_version}</p>
-            </div>
+          ? 
+          <VerticalTimeline>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', width: '45vh', left:'25vh', cursor: 'pointer' }}
+              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+              icon={""}>
+              <h3 className="vertical-timeline-element-title">{project_data.commit_message}</h3>
+              <h4 className="vertical-timeline-element-subtitle">{project_data.commit_user}</h4>
+              <p>
+                version: {project_data.project_version} <br/>
+                edit_date: {project_data.editdate}
+              </p>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
           : <></>
         ))}
       </ul>
