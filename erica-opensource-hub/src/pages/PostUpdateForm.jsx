@@ -15,24 +15,43 @@ function PostUpdateForm() {
       <ul>
         {ProjectData.project.map((project_data) => (
           project_data.project_id === 1 // 프로젝트 id로 판별
-          ? 
-          <VerticalTimeline>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', width: '45vh', left:'25vh', cursor: 'pointer' }}
-              contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
-              icon={""}
-              iconOnClick={()=>goToMain(project_data.project_version)}
-              onTimelineElementClick={()=>goToMain(project_data.project_version)}>
-              <h3 className="vertical-timeline-element-title">{project_data.commit_message}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{project_data.commit_user}</h4>
-              <p>
-                version: {project_data.project_version} <br/>
-                edit_date: {project_data.editdate}
-              </p>
-            </VerticalTimelineElement>
-          </VerticalTimeline>
+          ? project_data.project_version % 2 === 1
+            ?
+              <VerticalTimeline>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--content"
+                  contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+                  contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                  date={project_data.editdate}
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+                  iconOnClick={()=>goToMain(project_data.project_version)}
+                  onTimelineElementClick={()=>goToMain(project_data.project_version)}
+                  position="left">
+                  <h1 className="vertical-timeline-element-title">{"version:" + project_data.project_version}</h1>
+                  <h3 className="vertical-timeline-element-subtitle">{project_data.commit_user}</h3>
+                  <p>
+                    commit message :<br/> {project_data.commit_message}
+                  </p>
+                </VerticalTimelineElement>
+              </VerticalTimeline>
+            :
+              <VerticalTimeline>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--content"
+                  contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+                  contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                  date={project_data.editdate}
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+                  iconOnClick={()=>goToMain(project_data.project_version)}
+                  onTimelineElementClick={()=>goToMain(project_data.project_version)}
+                  position="right">
+                  <h1 className="vertical-timeline-element-title">{"version:" + project_data.project_version}</h1>
+                  <h3 className="vertical-timeline-element-subtitle">{project_data.commit_user}</h3>
+                  <p>
+                    commit message :<br/> {project_data.commit_message}
+                  </p>
+                </VerticalTimelineElement>
+              </VerticalTimeline>
           : <></>
         ))}
       </ul>
