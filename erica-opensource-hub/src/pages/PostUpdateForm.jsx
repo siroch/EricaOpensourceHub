@@ -12,7 +12,6 @@ function PostUpdateForm() {
   };
   return (
     <div class="test">
-      <ul>
         {ProjectData.project.map((project_data) => (
           project_data.project_id === 1 // 프로젝트 id로 판별
           ? project_data.project_version % 2 === 1
@@ -54,7 +53,6 @@ function PostUpdateForm() {
               </VerticalTimeline>
           : <></>
         ))}
-      </ul>
     </div>
   );
 }
