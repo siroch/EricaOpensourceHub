@@ -11,34 +11,21 @@ function Title() {
   );
 }
 
-function List() {
+function List({ id, onDelpost }) {
   return (
     <div>
       <form>
-        <h1></h1>
+        {/* <h1></h1> */}
         <input type="text" name="title" placeholder="프로젝트 제목"></input>
         <textarea placeholder="프로젝트 목적" name="data"></textarea>
-        <button type="submit">첨부파일</button>
-        <button type="submit">삭제</button>
+        <button type="button">첨부파일</button>
+        <button type="button" onClick={(id) => onDelpost(id)}>
+          삭제
+        </button>
       </form>
     </div>
   );
 }
-
-// function CreateForm(props) {
-//   return (
-//     <button
-//       className="createPost"
-//       onClick={(event) => {
-//         event.preventDefault();
-//         props.onAddpost()
-//       }}
-//     >
-//       {' '}
-//       생성하기{' '}
-//     </button>
-//   );
-// }
 
 function PostForm() {
   const [project_data, setProject_data] = useState([
@@ -49,26 +36,34 @@ function PostForm() {
       subdata: [{}],
     },
   ]);
+  const [nextId, setNextId] = useState(1);
   // const [project_data, setProject_data] = useState([0]);
-  const onAddpost = () => {
-    let countTemp = [...project_data];
+  const onAddpost = (id) => {
+    let dataTemp = [...project_data];
     // let counter = countTemp.slice(-1)[0];
-    console.log(countTemp.slice(-1)[0]);
-    countTemp.push({
-      id: 1,
+    // console.log(countTemp.slice(-1)[0]);
+    dataTemp.push({
+      id: nextId,
       title: '',
       data: '',
       subdata: [{}],
     });
-    console.log(countTemp.slice(-1)[0]);
-    setProject_data(countTemp);
+    setNextId(nextId + 1);
+    console.log(dataTemp.slice(-1)[0]);
+    setProject_data(dataTemp);
+  };
+
+  const onDelpost = (id) => {
+    setProject_data((project_data) => project_data.filter((data) => data.id !== id));
   };
 
   // const [input, setInput] = useState('asdfasf');
   // const [data_list, setData_list] = useState([
 
   // ]);
-  const dataList = project_data.map((data) => <List key={data.id}></List>);
+  const dataList = project_data.map((data) => (
+    <List key={data.id} onDelpost={() => onDelpost(data.id)}></List>
+  ));
 
   return (
     <div>
