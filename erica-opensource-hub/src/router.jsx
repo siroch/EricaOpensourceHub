@@ -9,7 +9,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/post/:id" element={<PostDetail />} />
+        <Route path="/post/:id/*" element={<PostDetail />} />
         <Route path="/post/:id/update" element={<PostUpdateForm />} />
         <Route path="/create" element={<PostForm />} />
       </Routes>
