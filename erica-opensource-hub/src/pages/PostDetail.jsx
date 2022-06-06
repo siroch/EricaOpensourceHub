@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import PostHome from '../components/PostHome';
 
 function PostDetail() {
   const [isRecruit, setIsRecruit] = useState(false);
@@ -38,7 +39,14 @@ function PostDetail() {
           </Tabs>
         </StTabsWrapper>
         <Routes>
-          <Route path="/*" element={<StMindMap>홈 입니다.</StMindMap>} />
+          <Route
+            path="/*"
+            element={
+              <StMindMap>
+                <PostHome />
+              </StMindMap>
+            }
+          />
           <Route path="/timeline" element={<StMindMap>타임라인 입니다.</StMindMap>} />
           <Route path="/constructor" element={<StMindMap>개설자/팀원 입니다.</StMindMap>} />
         </Routes>
