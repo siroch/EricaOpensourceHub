@@ -103,10 +103,6 @@ function spotConverter(dir, from) {
   }
 }
 
-function handleModelChange(changes) {
-  alert('GoJS model changed!');
-}
-
 function PostHome() {
   return (
     <>
@@ -250,7 +246,6 @@ function PostHome() {
           { from: 21, to: 211 },
           { from: 21, to: 212 },
         ]}
-        onModelChange={handleModelChange}
       />
     </>
   );
