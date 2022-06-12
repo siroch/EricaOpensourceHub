@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-function PostUpdateForm() {
-  const navigate = useNavigate();
+// function PostUpdateForm() {
+//   const navigate = useNavigate();
 
   const goToMain = (id) => { // 네비게이터
     navigate("/post/:"+String(id));
@@ -61,4 +61,4 @@ function PostUpdateForm() {
   );
 }
 
-export default PostUpdateForm;
+// export default PostUpdateForm;
