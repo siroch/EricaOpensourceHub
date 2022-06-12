@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   input {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     -webkit-border-radius: 0;
   }
   input:focus {

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import PostHome from '../components/PostHome';
+import SideBar from '../components/SideBar';
 
 function PostDetail() {
   const [isRecruit, setIsRecruit] = useState(false);
@@ -10,39 +12,50 @@ function PostDetail() {
   return (
     <StWrapper>
       <Header />
-      <StPostDetail>
-        <StProjectTitle>
-          <span>
-            {isRecruit && <strong>[구인] </strong>}허리 회전에 어려움을 겪는 환자들을 위한 회전 병상
-          </span>
-          <span>Rotating beds for patients with back rotation difficulties</span>
-        </StProjectTitle>
-        <StProjectWriter>
-          <StProfileImg
-            src="https://avatars.githubusercontent.com/u/42725903?s=40&v=4"
-            alt="writer"
-          />
-          <span>2021학년도 기계공학과 캡스톤 디자인 팀</span>
-        </StProjectWriter>
-        <StTabsWrapper>
-          <Tabs>
-            <Tab>
-              <Link to={`/post/${postId}`}>홈</Link>
-            </Tab>
-            <Tab>
-              <Link to={`/post/${postId}/timeline`}>타임라인</Link>
-            </Tab>
-            <Tab>
-              <Link to={`/post/${postId}/constructor`}>개설자/팀원</Link>
-            </Tab>
-          </Tabs>
-        </StTabsWrapper>
-        <Routes>
-          <Route path="/*" element={<StMindMap>홈 입니다.</StMindMap>} />
-          <Route path="/timeline" element={<StMindMap>타임라인 입니다.</StMindMap>} />
-          <Route path="/constructor" element={<StMindMap>개설자/팀원 입니다.</StMindMap>} />
-        </Routes>
-      </StPostDetail>
+      <StPostDetailWrapper>
+        <SideBar />
+        <StPostDetail>
+          <StProjectTitle>
+            <span>
+              {isRecruit && <strong>[구인] </strong>}허리 회전에 어려움을 겪는 환자들을 위한 회전
+              병상
+            </span>
+            <span>Rotating beds for patients with back rotation difficulties</span>
+          </StProjectTitle>
+          <StProjectWriter>
+            <StProfileImg
+              src="https://avatars.githubusercontent.com/u/42725903?s=40&v=4"
+              alt="writer"
+            />
+            <span>2021학년도 기계공학과 캡스톤 디자인 팀</span>
+          </StProjectWriter>
+          <StTabsWrapper>
+            <Tabs>
+              <Tab>
+                <Link to={`/post/${postId}`}>홈</Link>
+              </Tab>
+              <Tab>
+                <Link to={`/post/${postId}/timeline`}>타임라인</Link>
+              </Tab>
+              <Tab>
+                <Link to={`/post/${postId}/constructor`}>개설자/팀원</Link>
+              </Tab>
+            </Tabs>
+          </StTabsWrapper>
+          <Routes>
+            <Route
+              path="/*"
+              element={
+                <StMindMap>
+                  <PostHome />
+                </StMindMap>
+              }
+            />
+            <Route path="/timeline" element={<StMindMap>타임라인 입니다.</StMindMap>} />
+            <Route path="/constructor" element={<StMindMap>개설자/팀원 입니다.</StMindMap>} />
+          </Routes>
+        </StPostDetail>
+      </StPostDetailWrapper>
     </StWrapper>
   );
 }
@@ -54,8 +67,14 @@ const StWrapper = styled.div`
   height: calc(100% - 80px);
 `;
 
+const StPostDetailWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+`;
+
 const StProjectWriter = styled.div`
-  width: 75%;
+  width: 95%;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -63,13 +82,13 @@ const StProjectWriter = styled.div`
 `;
 
 const StTabsWrapper = styled.div`
-  width: 75%;
+  width: 95%;
 `;
 
 const StProjectTitle = styled.div`
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 95%;
   padding: 15px 0px;
   border-bottom: 1px solid lightgrey;
   span:first-child {
@@ -82,7 +101,7 @@ const StProjectTitle = styled.div`
 `;
 
 const StPostDetail = styled.div`
-  width: 100%;
+  width: 85%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -96,7 +115,7 @@ const StProfileImg = styled.img`
 `;
 
 const StMindMap = styled.div`
-  width: 75%;
+  width: 95%;
   height: 70%;
   border: 1px solid lightgrey;
 `;
