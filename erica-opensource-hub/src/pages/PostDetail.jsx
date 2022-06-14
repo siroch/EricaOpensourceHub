@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import PostHome from '../components/PostHome';
 import SideBar from '../components/SideBar';
+import TimeLine from '../components/TimeLine';
 
 function PostDetail() {
   const [isRecruit, setIsRecruit] = useState(false);
@@ -51,7 +52,14 @@ function PostDetail() {
                 </StMindMap>
               }
             />
-            <Route path="/timeline" element={<StMindMap>타임라인 입니다.</StMindMap>} />
+            <Route
+              path="/timeline"
+              element={
+                <StMindMap>
+                  <TimeLine />
+                </StMindMap>
+              }
+            />
             <Route path="/constructor" element={<StMindMap>개설자/팀원 입니다.</StMindMap>} />
           </Routes>
         </StPostDetail>
@@ -118,6 +126,7 @@ const StMindMap = styled.div`
   width: 95%;
   height: 70%;
   border: 1px solid lightgrey;
+  overflow: auto;
 `;
 
 const Tabs = styled.div`
