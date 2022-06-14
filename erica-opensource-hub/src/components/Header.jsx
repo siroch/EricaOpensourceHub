@@ -1,11 +1,22 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { icLogo, icMenu, icMypage, icSearch } from '../assets/icons';
 
 function Header() {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate('/');
+  };
+
+  const goToForm = () => {
+    navigate('/create');
+  };
+
   return (
     <StWrapper>
       <StLogoWrapper>
-        <StLogoImg src={icLogo} alt="logo" />
+        <StLogoImg src={icLogo} alt="logo" onClick={goToMain} />
       </StLogoWrapper>
       <StInputWrapper>
         <StSelectBox name="sortOption">
@@ -17,6 +28,7 @@ function Header() {
         </StInputButton>
       </StInputWrapper>
       <StImageWrapper>
+        <StCreateProjectButton onClick={goToForm}>프로젝트 업로드 바로가기</StCreateProjectButton>
         <img src={icMypage} alt="mypage" width={40} height={40} />
         <img src={icMenu} alt="menu" width={40} height={40} />
       </StImageWrapper>
@@ -37,6 +49,9 @@ const StSelectBox = styled.select`
 const StLogoImg = styled.img`
   width: 100%;
   height: 100%;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const StInput = styled.input`
@@ -70,7 +85,7 @@ const StInputWrapper = styled.div`
 `;
 
 const StImageWrapper = styled.div`
-  width: 200px;
+  width: 210px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -85,4 +100,13 @@ const StWrapper = styled.div`
   padding: 0px 20px;
   align-items: center;
   border-bottom: 1px solid lightgrey;
+`;
+
+const StCreateProjectButton = styled.button`
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #0f3871;
+  color: white;
+  font-size: 1rem;
+  margin: 2px;
 `;
