@@ -1,13 +1,20 @@
 import { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import PostHome from '../components/PostHome';
 import SideBar from '../components/SideBar';
+import TimeLine from '../components/TimeLine';
 
 function PostDetail() {
+  const navigate = useNavigate();
+
   const [isRecruit, setIsRecruit] = useState(false);
   const [postId, setPostId] = useState(1);
+
+  const goToForm = () => {
+    navigate(`/post/${postId}/update`);
+  };
 
   return (
     <StWrapper>
@@ -20,7 +27,10 @@ function PostDetail() {
               {isRecruit && <strong>[구인] </strong>}허리 회전에 어려움을 겪는 환자들을 위한 회전
               병상
             </span>
-            <span>Rotating beds for patients with back rotation difficulties</span>
+            <div>
+              <StProjectButton onClick={goToForm}>수정하기</StProjectButton>
+              {isRecruit && <StProjectButton>참여하기</StProjectButton>}
+            </div>
           </StProjectTitle>
           <StProjectWriter>
             <StProfileImg
@@ -51,7 +61,14 @@ function PostDetail() {
                 </StMindMap>
               }
             />
-            <Route path="/timeline" element={<StMindMap>타임라인 입니다.</StMindMap>} />
+            <Route
+              path="/timeline"
+              element={
+                <StMindMap>
+                  <TimeLine />
+                </StMindMap>
+              }
+            />
             <Route path="/constructor" element={<StMindMap>개설자/팀원 입니다.</StMindMap>} />
           </Routes>
         </StPostDetail>
@@ -78,25 +95,30 @@ const StProjectWriter = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 10px 0px;
+  padding-bottom: 10px;
 `;
 
 const StTabsWrapper = styled.div`
   width: 95%;
 `;
 
+const StProjectButton = styled.button`
+  border-radius: 10px;
+  background-color: #0f3871;
+  color: white;
+  padding: 10px;
+  font-size: 1.1rem;
+  margin: 2px;
+`;
+
 const StProjectTitle = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 95%;
-  padding: 15px 0px;
-  border-bottom: 1px solid lightgrey;
+  padding-top: 15px;
   span:first-child {
     font-size: 1.8rem;
-    padding-bottom: 5px;
-  }
-  span:last-child {
-    font-size: 1.3rem;
   }
 `;
 
@@ -118,6 +140,7 @@ const StMindMap = styled.div`
   width: 95%;
   height: 70%;
   border: 1px solid lightgrey;
+  overflow: auto;
 `;
 
 const Tabs = styled.div`

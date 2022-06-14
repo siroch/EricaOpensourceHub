@@ -1,16 +1,15 @@
-import './PostUpdateForm.css';
 import ProjectData from '../json/project_item_test.json';
 import UserData from '../json/user_item_test.json';
 import { useNavigate } from 'react-router-dom';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-function PostUpdateForm() {
+function TimeLine() {
   const navigate = useNavigate();
 
   const goToMain = (id) => {
     // 네비게이터
-    navigate('/post/:' + String(id));
+    navigate('/post/' + '1/' + String(id));
   };
   return (
     <div class="test">
@@ -23,17 +22,17 @@ function PostUpdateForm() {
               // https://github.com/stephane-monnot/react-vertical-timeline
               // 위 깃허브에 설명 존재
               // h1~p까지가 박스에 들어가는 내용물, 버전, 커밋유저 이름, 커밋메세지가 나옴
-              <VerticalTimeline>
+              <VerticalTimeline lineColor="black">
                 <VerticalTimelineElement
                   className="vertical-timeline-element--content"
                   contentStyle={{
                     background: 'rgb(33, 150, 243)',
-                    color: '#fff',
+                    color: 'black',
                     cursor: 'pointer',
                   }}
                   contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                   date={project_data.editdate}
-                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: 'black', cursor: 'pointer' }}
                   iconOnClick={() => goToMain(project_data.project_version)}
                   onTimelineElementClick={() => goToMain(project_data.project_version)}
                   position="left"
@@ -48,17 +47,17 @@ function PostUpdateForm() {
                 </VerticalTimelineElement>
               </VerticalTimeline>
             ) : (
-              <VerticalTimeline>
+              <VerticalTimeline lineColor="black">
                 <VerticalTimelineElement
                   className="vertical-timeline-element--content"
                   contentStyle={{
                     background: 'rgb(33, 150, 243)',
-                    color: '#fff',
+                    color: 'black',
                     cursor: 'pointer',
                   }}
                   contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                   date={project_data.editdate}
-                  iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', cursor: 'pointer' }}
+                  iconStyle={{ background: 'rgb(33, 150, 243)', color: 'black', cursor: 'pointer' }}
                   iconOnClick={() => goToMain(project_data.project_version)}
                   onTimelineElementClick={() => goToMain(project_data.project_version)}
                   position="right"
@@ -81,4 +80,4 @@ function PostUpdateForm() {
   );
 }
 
-export default PostUpdateForm;
+export default TimeLine;
