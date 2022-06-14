@@ -119,41 +119,41 @@ function PostForm() {
 
   //
   const onAddpostsub = (parenid) => {
-    // 바로 위의 부모 아이디 받아오는 가정
-    let tempid = [...parenid];
-    // parentid
-    let tempobject = [...project_data];
-    for (let i = 0; i < parenid.length; i++) {
-      //
-      tempobject.map((data, index) => {
-        if (data.id[i] === parenid[i]) {
-          // console.log('asdfadsf' + tempobject.subdata);
-          if (i === parenid.length - 1) {
-            if (typeof tempobject.subdata === 'undefined') {
-              // console.log('dfa');
-              setMaxdep(maxdepth + 1);
-              tempobject.subdata = [
-                {
-                  id: tempid.push(0),
-                  title: '',
-                  data: '',
-                  subdata: [{}],
-                },
-              ];
-            } else {
-              tempobject.subdata.concat({
-                id: tempid.push(tempobject.subdata.length),
-                title: '',
-                data: '',
-                subdata: [{}],
-              });
-            }
-          }
-        }
-      });
-    }
-    // console.log(tempobject.slice(-1)[0]);
-    setProject_data(tempobject);
+    // // 바로 위의 부모 아이디 받아오는 가정
+    // let tempid = [...parenid];
+    // // parentid
+    // let tempobject = [...project_data];
+    // for (let i = 0; i < parenid.length; i++) {
+    //   //
+    //   tempobject.map((data, index) => {
+    //     if (data.id[i] === parenid[i]) {
+    //       // console.log('asdfadsf' + tempobject.subdata);
+    //       if (i === parenid.length - 1) {
+    //         if (typeof tempobject.subdata === 'undefined') {
+    //           // console.log('dfa');
+    //           setMaxdep(maxdepth + 1);
+    //           tempobject.subdata = [
+    //             {
+    //               id: tempid.push(0),
+    //               title: '',
+    //               data: '',
+    //               subdata: [{}],
+    //             },
+    //           ];
+    //         } else {
+    //           tempobject.subdata.concat({
+    //             id: tempid.push(tempobject.subdata.length),
+    //             title: '',
+    //             data: '',
+    //             subdata: [{}],
+    //           });
+    //         }
+    //       }
+    //     }
+    //   });
+    // }
+    // // console.log(tempobject.slice(-1)[0]);
+    // setProject_data(tempobject);
   };
 
   //subdata 조회를 해야 하는디.....
