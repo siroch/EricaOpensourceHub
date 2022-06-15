@@ -2,9 +2,28 @@ import './MainPage.css';
 import styled from 'styled-components';
 import SideBar from '../components/SideBar';
 import Header from '../components/Header';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { getProjects } from '../api';
+import { useNavigate } from 'react-router-dom';
 
 function MainPage() {
-  const test = [1, 2, 3, 4, 5];
+  const [projects, setProjects] = useState([]);
+  const navigate = useNavigate();
+
+  const getProjectsInfo = async () => {
+    const response = await getProjects();
+    response && setProjects(response);
+  };
+
+  const goToProjectDetail = (id, e) => {
+    navigate(`/post/${id}`);
+  };
+
+  useEffect(() => {
+    getProjectsInfo();
+  }, []);
+
   return (
     <StWrapper>
       <Header />
@@ -21,21 +40,28 @@ function MainPage() {
             </div>
           </StMainDetailHeader>
           <StProjectList>
-            {test.map((item) => (
-              <StProjectItem>
+            {projects.slice(0, 5).map((project) => (
+              <StProjectItem key={project.id} onClick={(e) => goToProjectDetail(project.id, e)}>
                 <StProjectHeader>
-                  <StProjectNumber>1</StProjectNumber>
+                  <StProjectNumber>{project.id}</StProjectNumber>
                   <StProjectTitle>
-                    <div>모바일 수집형 RPG의 사용자 분석: "쿠키런:킹덤"을 중심으로</div>
-                    <div>{'공학' + ' > ' + '컴퓨터학'}</div>
+                    <div>
+                      {project.teamProposal && '[구인]'}
+                      {project.title}
+                    </div>
+                    <div>{project.college + ' > ' + project.department}</div>
                   </StProjectTitle>
                 </StProjectHeader>
                 <div>
-                  <StProjectDesc>2022.05.29</StProjectDesc>
-                  <StProjectDesc>2018000000 김한양</StProjectDesc>
-                  <StProjectPopular>조회수 189회|56명이 서재에 담았어요</StProjectPopular>
+                  <StProjectDesc>{project.createdAt}</StProjectDesc>
+                  <StProjectDesc>{project.writerNum + ' ' + project.writerName}</StProjectDesc>
+                  <StProjectPopular>
+                    조회수 {project.view}회|{project.like}명이 서재에 담았어요
+                  </StProjectPopular>
+                  <StButtonWrapper>
+                    <StProjectButton>내 서재 담기</StProjectButton>
+                  </StButtonWrapper>
                 </div>
-                <StProjectButton>내 서재 담기</StProjectButton>
               </StProjectItem>
             ))}
             <StProjectPlusItem>+더보기</StProjectPlusItem>
@@ -100,6 +126,9 @@ const StProjectItem = styled.div`
   justify-content: space-between;
   max-height: 250px;
   min-width: 300px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const StProjectDesc = styled.div`
@@ -120,6 +149,13 @@ const StProjectButton = styled.button`
   border: 1px solid black;
   padding: 5px;
   font-size: 1.1rem;
+  width: 90%;
+`;
+
+const StButtonWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
 `;
 
 const StProjectHeader = styled.div`
@@ -138,6 +174,9 @@ const StProjectTitle = styled.div`
   font-size: 1.3rem;
   div {
     padding-bottom: 10px;
+  }
+  div:last-child {
+    font-size: 1.1rem;
   }
 `;
 
