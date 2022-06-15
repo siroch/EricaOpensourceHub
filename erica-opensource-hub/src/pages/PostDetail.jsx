@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { getProject, getTimeLineProjects } from '../api';
 import Header from '../components/Header';
 import PostHome from '../components/PostHome';
 import SideBar from '../components/SideBar';
@@ -8,13 +9,29 @@ import TimeLine from '../components/TimeLine';
 
 function PostDetail() {
   const navigate = useNavigate();
+  const params = useParams();
 
-  const [isRecruit, setIsRecruit] = useState(false);
-  const [postId, setPostId] = useState(1);
+  const [project, setProject] = useState({});
+  const [projects, setProjects] = useState([]);
+
+  const getProjectInfo = async () => {
+    const response = await getProject(params.id);
+    response && setProject(response);
+  };
+
+  const getProjectsInfo = async () => {
+    const response = await getTimeLineProjects();
+    response && setProjects(response);
+  };
 
   const goToForm = () => {
-    navigate(`/post/${postId}/update`);
+    navigate(`/post/${project.id}/update`);
   };
+
+  useEffect(() => {
+    getProjectInfo();
+    getProjectsInfo();
+  }, []);
 
   return (
     <StWrapper>
@@ -24,31 +41,27 @@ function PostDetail() {
         <StPostDetail>
           <StProjectTitle>
             <span>
-              {isRecruit && <strong>[구인] </strong>}허리 회전에 어려움을 겪는 환자들을 위한 회전
-              병상
+              {project.team_proposal && <strong>[구인] </strong>}
+              {project.title}
             </span>
             <div>
               <StProjectButton onClick={goToForm}>수정하기</StProjectButton>
-              {isRecruit && <StProjectButton>참여하기</StProjectButton>}
+              {project.team_proposal && <StProjectButton>참여하기</StProjectButton>}
             </div>
           </StProjectTitle>
           <StProjectWriter>
-            <StProfileImg
-              src="https://avatars.githubusercontent.com/u/42725903?s=40&v=4"
-              alt="writer"
-            />
-            <span>2021학년도 기계공학과 캡스톤 디자인 팀</span>
+            <span>{project.owner_name}</span>
           </StProjectWriter>
           <StTabsWrapper>
             <Tabs>
               <Tab>
-                <Link to={`/post/${postId}`}>홈</Link>
+                <Link to={`/post/${project.id}`}>홈</Link>
               </Tab>
               <Tab>
-                <Link to={`/post/${postId}/timeline`}>타임라인</Link>
+                <Link to={`/post/${project.id}/timeline`}>타임라인</Link>
               </Tab>
               <Tab>
-                <Link to={`/post/${postId}/constructor`}>개설자/팀원</Link>
+                <Link to={`/post/${project.id}/constructor`}>개설자/팀원</Link>
               </Tab>
             </Tabs>
           </StTabsWrapper>
@@ -57,7 +70,7 @@ function PostDetail() {
               path="/*"
               element={
                 <StMindMap>
-                  <PostHome />
+                  {project.project_data && <PostHome projectData={project.project_data} />}
                 </StMindMap>
               }
             />
@@ -65,7 +78,7 @@ function PostDetail() {
               path="/timeline"
               element={
                 <StMindMap>
-                  <TimeLine />
+                  <TimeLine projects={projects} />
                 </StMindMap>
               }
             />
@@ -95,7 +108,10 @@ const StProjectWriter = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  span {
+    font-size: 1.2rem;
+  }
 `;
 
 const StTabsWrapper = styled.div`
