@@ -36,15 +36,3 @@ export const getUsers = async () => {
   const response = await axios.get(`http://localhost:4000/users`);
   return response.data;
 };
-
-export const createProject = async (requestData) => {
-  const response = await axios.post(`http://localhost:4000/projects`, requestData);
-  return response.data;
-};
-
-export const patchProject = async (id) => {
-  const response = await axios.patch(`http://localhost:4000/projects/${id}`, {
-    project_id: id,
-  });
-  return response.data;
-};

@@ -4,12 +4,11 @@ import SideBar from '../components/SideBar';
 import Header from '../components/Header';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { getProjects, getUser } from '../api';
+import { getProjects } from '../api';
 import { useNavigate } from 'react-router-dom';
 
 function MainPage() {
   const [projects, setProjects] = useState([]);
-  const [userInfo, setUserInfo] = useState([]);
   const navigate = useNavigate();
 
   const getProjectsInfo = async () => {
@@ -21,14 +20,8 @@ function MainPage() {
     navigate(`/post/${id}`);
   };
 
-  const getUserInfo = async () => {
-    const response = await getUser(1);
-    response && setUserInfo(response);
-  };
-
   useEffect(() => {
     getProjectsInfo();
-    getUserInfo();
   }, []);
 
   return (
@@ -38,7 +31,7 @@ function MainPage() {
         <SideBar />
         <StMainDetail>
           <StMainDetailHeader>
-            <span>{userInfo.name}을 위한 추천 프로젝트</span>
+            <span>김한양을 위한 추천 프로젝트</span>
             <div>
               <input id="popular" type="radio" name="sort" value="popular" />
               <label>조회 높은 순 </label>
