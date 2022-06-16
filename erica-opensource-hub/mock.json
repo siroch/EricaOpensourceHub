@@ -15,7 +15,9 @@
       "editdate": "2022.01.01 11시 06분 12초",
       "like": 0,
       "view": 0,
-      "collaborator": [23],
+      "collaborator": [
+        23
+      ],
       "team_proposal": false,
       "commit_message": "나노광전자학과 프로젝트 테스트 데이터",
       "commit_user": 23,
@@ -37,13 +39,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -63,7 +92,9 @@
       "editdate": "2022.01.02 13시 40분 35초",
       "like": 0,
       "view": 0,
-      "collaborator": [15],
+      "collaborator": [
+        15
+      ],
       "team_proposal": false,
       "commit_message": "인공지능학과 프로젝트 테스트 데이터",
       "commit_user": 15,
@@ -72,7 +103,7 @@
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "인공지능학과 프로젝트 1 version 1",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -85,13 +116,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -111,17 +169,18 @@
       "editdate": "2022.01.03 00시 00분 09초",
       "like": 0,
       "view": 0,
-      "collaborator": [2],
+      "collaborator": [
+        2
+      ],
       "team_proposal": false,
       "commit_message": "건설환경공학과 프로젝트 테스트 데이터",
       "commit_user": 2,
-
       "commit_username": "test",
       "project_data": [
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "건설환경공학과 프로젝트 1 version 1",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -134,13 +193,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -160,7 +246,9 @@
       "editdate": "2022.01.04 01시 40분 33초",
       "like": 0,
       "view": 0,
-      "collaborator": [35],
+      "collaborator": [
+        35
+      ],
       "team_proposal": false,
       "commit_message": "보험계리학과 프로젝트 테스트 데이터",
       "commit_user": 35,
@@ -169,7 +257,7 @@
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "보험계리학과 프로젝트 1 version 1",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -182,13 +270,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -208,7 +323,9 @@
       "editdate": "2022.01.05 11시 22분 37초",
       "like": 0,
       "view": 0,
-      "collaborator": [39],
+      "collaborator": [
+        39
+      ],
       "team_proposal": false,
       "commit_message": "커뮤니케이션디자인학과 프로젝트 테스트 데이터",
       "commit_user": 39,
@@ -217,7 +334,7 @@
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "커뮤니케이션디자인학과 프로젝트 1 version 1",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -230,13 +347,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -256,7 +400,9 @@
       "editdate": "2022.01.06 03시 56분 27초",
       "like": 0,
       "view": 0,
-      "collaborator": [17],
+      "collaborator": [
+        17
+      ],
       "team_proposal": false,
       "commit_message": "약학과 프로젝트 테스트 데이터",
       "commit_user": 17,
@@ -265,7 +411,7 @@
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "약학과 프로젝트 1 version 1",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -278,13 +424,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -304,7 +477,9 @@
       "editdate": "2022.01.07 20시 33분 11초",
       "like": 0,
       "view": 0,
-      "collaborator": [33],
+      "collaborator": [
+        33
+      ],
       "team_proposal": false,
       "commit_message": "경제학부 프로젝트 테스트 데이터",
       "commit_user": 33,
@@ -313,7 +488,7 @@
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "경제학부 프로젝트 1 version 1",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -326,13 +501,40 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
@@ -352,7 +554,9 @@
       "editdate": "2022.01.10 11시 06분 12초",
       "like": 0,
       "view": 0,
-      "collaborator": [23],
+      "collaborator": [
+        23
+      ],
       "team_proposal": false,
       "commit_message": "나노광전자학과 프로젝트 테스트 데이터",
       "commit_user": 23,
@@ -361,7 +565,7 @@
         {
           "key": 0,
           "text": "프로젝트 제목",
-          "content": "모바일 수집형 RPG의 사용자 분석: 쿠키런:킹덤을 중심으로",
+          "content": "나노광전자학과 프로젝트 테스트 데이터",
           "loc": "0 0"
         },
         {
@@ -374,16 +578,351 @@
           "loc": "77 -22"
         },
         {
-          "parent": 0,
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항",
+          "content": "문제 사항은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 12,
+          "parent": 1,
+          "text": "필요성",
+          "content": "필요성은 어쩌고 저쩌고~",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
           "key": 2,
-          "text": "프로젝트 기대효과",
+          "parent": 0,
+          "text": "기대 효과",
           "content": "내용없음",
           "brush": "darkseagreen",
           "dir": "right",
           "loc": "77 53"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "활동 내역",
+          "content": "내용없음",
+          "brush": "palevioletred",
+          "dir": "left",
+          "loc": "-20 -22"
         }
       ],
       "proposal_data": []
+    },
+    {
+      "owner_id": 1,
+      "owner_name": "1번유저",
+      "owner_num": "2018000001",
+      "project_id": 0,
+      "project_version": 1,
+      "title": "",
+      "college": "",
+      "department": "",
+      "hashtag": "11111111",
+      "createdate": "2022.6.16 13시 59분 44초",
+      "editdate": "2022.6.16 13시 59분 44초",
+      "like": 0,
+      "view": 0,
+      "collaborator": [
+        1
+      ],
+      "team_proposal": false,
+      "commit_message": "111111",
+      "commit_user": 1,
+      "commit_username": "1번유저",
+      "project_data": [
+        {
+          "key": 0,
+          "text": "프로젝트 제목",
+          "content": "",
+          "loc": "0 0"
+        },
+        {
+          "key": 1,
+          "parent": 0,
+          "text": "프로젝트 문제 사항1",
+          "content": "문제 사항은 어쩌고 저쩌고~1",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "77 -22"
+        },
+        {
+          "key": 10,
+          "parent": 1,
+          "text": "프로젝트 문제 사항2",
+          "content": "문제 사항은 어쩌고 저쩌고~2",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항3",
+          "content": "문제 사항은 어쩌고 저쩌고~3",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
+          "key": 2,
+          "parent": 0,
+          "text": "프로젝트 문제 사항4",
+          "content": "문제 사항은 어쩌고 저쩌고~4",
+          "brush": "darkseagreen",
+          "dir": "left",
+          "loc": "-20 -22"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "프로젝트 문제 사항5",
+          "content": "문제 사항은 어쩌고 저쩌고~5",
+          "brush": "palevioletred",
+          "dir": "right",
+          "loc": "77 53"
+        }
+      ],
+      "proposal_data": [],
+      "id": 9
+    },
+    {
+      "owner_id": 1,
+      "owner_name": "1번유저",
+      "owner_num": "2018000001",
+      "project_id": 10,
+      "project_version": 1,
+      "title": "",
+      "college": "",
+      "department": "",
+      "hashtag": "11111111",
+      "createdate": "2022.6.16 14시 0분 41초",
+      "editdate": "2022.6.16 14시 0분 41초",
+      "like": 0,
+      "view": 0,
+      "collaborator": [
+        1
+      ],
+      "team_proposal": false,
+      "commit_message": "111111",
+      "commit_user": 1,
+      "commit_username": "1번유저",
+      "project_data": [
+        {
+          "key": 0,
+          "text": "프로젝트 제목",
+          "content": "",
+          "loc": "0 0"
+        },
+        {
+          "key": 1,
+          "parent": 0,
+          "text": "프로젝트 문제 사항1",
+          "content": "문제 사항은 어쩌고 저쩌고~1",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "77 -22"
+        },
+        {
+          "key": 10,
+          "parent": 1,
+          "text": "프로젝트 문제 사항2",
+          "content": "문제 사항은 어쩌고 저쩌고~2",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 문제 사항3",
+          "content": "문제 사항은 어쩌고 저쩌고~3",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
+          "key": 2,
+          "parent": 0,
+          "text": "프로젝트 문제 사항4",
+          "content": "문제 사항은 어쩌고 저쩌고~4",
+          "brush": "darkseagreen",
+          "dir": "left",
+          "loc": "-20 -22"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "프로젝트 문제 사항5",
+          "content": "문제 사항은 어쩌고 저쩌고~5",
+          "brush": "palevioletred",
+          "dir": "right",
+          "loc": "77 53"
+        }
+      ],
+      "proposal_data": [],
+      "id": 10
+    },
+    {
+      "owner_id": 1,
+      "owner_name": "1번유저",
+      "owner_num": "2018000001",
+      "project_id": 11,
+      "project_version": 1,
+      "title": "팀플, IC-PBL을 왜 해야하는가?",
+      "college": "소프트웨어융합대학",
+      "department": "소프트웨어학부",
+      "hashtag": "#팀플 #존나 싫어",
+      "createdate": "2022.6.16 14시 10분 17초",
+      "editdate": "2022.6.16 14시 10분 17초",
+      "like": 0,
+      "view": 0,
+      "collaborator": [
+        1
+      ],
+      "team_proposal": true,
+      "commit_message": "프로젝트 초기 세팅",
+      "commit_user": 1,
+      "commit_username": "1번유저",
+      "project_data": [
+        {
+          "key": 0,
+          "text": "프로젝트 제목",
+          "content": "팀플, IC-PBL을 왜 해야하는가?",
+          "loc": "0 0"
+        },
+        {
+          "key": 1,
+          "parent": 0,
+          "text": "프로젝트 문제 사항",
+          "content": "팀플을 왜 해야 하는가",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "77 -22"
+        },
+        {
+          "key": 10,
+          "parent": 1,
+          "text": "필요성",
+          "content": "학교에서 하는 거 가지고는 실무에 도움이 되지 않는다.",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 11,
+          "parent": 1,
+          "text": "원인",
+          "content": "그냥 원흉이다",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
+          "key": 2,
+          "parent": 0,
+          "text": "프로젝트 목표",
+          "content": "팀플과 IC-PBL과목을 없애버리자",
+          "brush": "darkseagreen",
+          "dir": "left",
+          "loc": "-20 -22"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "프로젝트 활동 사항",
+          "content": "인턴이 답이다",
+          "brush": "palevioletred",
+          "dir": "right",
+          "loc": "77 53"
+        }
+      ],
+      "proposal_data": [],
+      "id": 11
+    },
+    {
+      "owner_id": 1,
+      "owner_name": "1번유저",
+      "owner_num": "2018000001",
+      "project_id": 12,
+      "project_version": 1,
+      "title": "왜 팀플을 해야하는가?",
+      "college": "소프트웨어융합대학",
+      "department": "소프트웨어학부",
+      "hashtag": "#소프트웨어학부 #소프트웨어융합대학",
+      "createdate": "2022.6.16 14시 16분 0초",
+      "editdate": "2022.6.16 14시 16분 0초",
+      "like": 0,
+      "view": 0,
+      "collaborator": [
+        1
+      ],
+      "team_proposal": true,
+      "commit_message": "프로젝트 초기 세팅",
+      "commit_user": 1,
+      "commit_username": "1번유저",
+      "project_data": [
+        {
+          "key": 0,
+          "text": "프로젝트 제목",
+          "content": "왜 팀플을 해야하는가?",
+          "loc": "0 0"
+        },
+        {
+          "key": 1,
+          "parent": 0,
+          "text": "프로젝트 문제 사항",
+          "content": "팀플은 사회 악이다",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "77 -22"
+        },
+        {
+          "key": 10,
+          "parent": 1,
+          "text": "프로젝트 원인",
+          "content": "교수가 문제",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 -48"
+        },
+        {
+          "key": 11,
+          "parent": 1,
+          "text": "프로젝트 필요성",
+          "content": "인턴이 최고",
+          "brush": "skyblue",
+          "dir": "right",
+          "loc": "200 4"
+        },
+        {
+          "key": 2,
+          "parent": 0,
+          "text": "프로젝트 목표",
+          "content": "팀플을 없애자",
+          "brush": "darkseagreen",
+          "dir": "left",
+          "loc": "-20 -22"
+        },
+        {
+          "key": 3,
+          "parent": 0,
+          "text": "프로젝트 활동 사항",
+          "content": "ㅅㅂㅅㅂ",
+          "brush": "palevioletred",
+          "dir": "right",
+          "loc": "77 53"
+        }
+      ],
+      "proposal_data": [],
+      "id": 12
     }
   ],
   "users": [
